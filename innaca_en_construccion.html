@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INNACA - En Construcción</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .stripes {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+      90deg,
+      #f5c800 0px, #f5c800 40px,
+      #000 40px, #000 50px,
+      #cc1a1a 50px, #cc1a1a 90px,
+      #000 90px, #000 100px
+    );
+  }
+  .stripes-bottom {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 8px;
+    background: repeating-linear-gradient(
+      90deg,
+      #f5c800 0px, #f5c800 40px,
+      #000 40px, #000 50px,
+      #cc1a1a 50px, #cc1a1a 90px,
+      #000 90px, #000 100px
+    );
+  }
+  .container {
+    text-align: center;
+    padding: 40px 24px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .logo-area {
+    margin-bottom: 36px;
+  }
+  .logo-text {
+    font-size: 68px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .logo-i { color: #f5c800; font-style: italic; }
+  .logo-n1 { color: #f5c800; font-style: italic; }
+  .logo-bar { display: inline-block; width: 10px; height: 68px; background: #cc1a1a; margin: 0 4px; vertical-align: middle; border-radius: 2px; }
+  .logo-n2 { color: #f5c800; font-style: italic; }
+  .logo-aca { color: #f5c800; font-style: italic; }
+  .logo-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .line-red { width: 80px; height: 4px; background: #cc1a1a; border-radius: 2px; }
+  .line-red-sm { width: 50px; height: 4px; background: #cc1a1a; border-radius: 2px; }
+  .line-yellow { width: 40px; height: 4px; background: #f5c800; border-radius: 2px; }
+  .rif {
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: #cc1a1a;
+    margin: 0 auto 28px;
+  }
+  .icon-construction {
+    font-size: 52px;
+    margin-bottom: 16px;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f5c800;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .progress-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  .progress-bar-bg {
+    background: #1a1a1a;
+    border-radius: 4px;
+    height: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #cc1a1a, #f5c800);
+    border-radius: 4px;
+    width: 0%;
+    animation: fillBar 2s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  @keyframes fillBar {
+    to { width: 65%; }
+  }
+  .contact {
+    font-size: 13px;
+    color: #555;
+    border-top: 0.5px solid #222;
+    padding-top: 20px;
+    margin-top: 4px;
+  }
+  .contact a {
+    color: #f5c800;
+    text-decoration: none;
+  }
+  .contact a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="stripes"></div>
+
+<div class="container">
+  <div class="logo-area">
+    <div class="logo-text">
+      <span class="logo-i">i</span><span class="logo-n1">n</span><span class="logo-bar"></span><span class="logo-n2">n</span><span class="logo-aca">aca</span>
+    </div>
+    <div class="logo-lines">
+      <div class="line-red"></div>
+      <div class="line-red-sm"></div>
+      <div class="line-yellow"></div>
+    </div>
+    <div class="rif">Rif: J-30828851-9</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="icon-construction">🚧</div>
+
+  <div class="title">En Construcción</div>
+
+  <p class="subtitle">
+    Estamos trabajando para ofrecerte una experiencia mejor.<br>
+    Pronto estaremos de vuelta con grandes novedades.
+  </p>
+
+  <div class="progress-label">Progreso del sitio</div>
+  <div class="progress-bar-bg">
+    <div class="progress-bar-fill"></div>
+  </div>
+
+  <div class="contact">
+    ¿Necesitas contactarnos? Escríbenos a
+    <a href="mailto:info@innaca.com">info@innaca.com</a>
+  </div>
+</div>
+
+<div class="stripes-bottom"></div>
+</body>
+</html>
